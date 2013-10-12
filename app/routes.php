@@ -26,46 +26,8 @@
 Route::get('/', function()
 {
 	return View::make('hello');
-});
 
-//myExpense
-Route::group(array('prefix' => 'my-expense'), function()
-{
-    Route::get('/', function()
-    {
-        // Has Auth Filter
-        var_dump('index');
-    });
-});
-
-//myBalance
-Route::group(array('prefix' => 'my-balance'), function()
-{
-    Route::get('/', function()
-    {
-        // Has Auth Filter
-        var_dump('index');
-    });
-});
-
-//reports
-Route::group(array('prefix' => 'report'), function()
-{
-    Route::get('/', function()
-    {
-        // Has Auth Filter
-        var_dump('index');
-    });
 });
 
 
-//Settings
-Route::group(array('prefix' => 'setting'), function()
-{
-    Route::get('/', function()
-    {
-        // Has Auth Filter
-        var_dump('index');
-    });
-});
 

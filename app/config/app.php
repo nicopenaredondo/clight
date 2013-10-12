@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => '2Zgv1IHmK78AiLjn3cUmopVqiAFZBOzn',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -113,6 +113,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Profiler\ProfilerServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider',
+		'Cartalyst\Sentry\SentryServiceProvider'
 
 	),
 
@@ -178,7 +181,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+		'Profiler' 		  => 'Profiler\Facades\Profiler',
+		'Sentry' 		  => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 	),
 
 );
