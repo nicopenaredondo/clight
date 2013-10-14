@@ -19,7 +19,10 @@ class CreateJoBasicInfoTable extends Migration {
 			$table->date('jo_date_issue');
 			$table->date('jo_date_release');
 			$table->string('jo_technician',128);
-			$table->string('jo_csr',128);	
+			$table->string('jo_csr',128);
+			$table->integer('jo_status_id');
+			$table->text('complaint');
+			$table->text('remarks');		
 			$table->timestamps();
 		});
 	}
