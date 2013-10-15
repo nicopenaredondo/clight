@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://citylight.dev',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -115,7 +115,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Profiler\ProfilerServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
-		'Cartalyst\Sentry\SentryServiceProvider'
+		'Cartalyst\Sentry\SentryServiceProvider',
+		'GrahamCampbell\Binput\BinputServiceProvider'
 
 	),
 
@@ -183,6 +184,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Profiler' 		  => 'Profiler\Facades\Profiler',
 		'Sentry' 		  => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Binput'  		  => 'GrahamCampbell\Binput\Facades\Binput'
 	),
 
 );

@@ -25,5 +25,11 @@
 //dashboard
 Route::get('/','Admin\AdminBranch@index');
 
+Route::group(array('prefix' => 'account'),function()
+{
+	Route::get('login',array('as' => 'login','uses' => 'AccountController@getLogin'));
+	Route::get('forgot-password',array('as' => 'forgot-password','uses' => 'AccountController@getForgotPassword'));
+});
+
 
 
