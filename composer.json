@@ -11,7 +11,7 @@
 		"fzaninotto/faker": "dev-master",
 		"graham-campbell/binput": "dev-master",
 		"nesbot/carbon": "dev-master",
-		"phpunit/phpunit": "dev-master"
+		"phpunit/phpunit": "dev-hhvm"
 	},
 	"autoload": {
 		"classmap": [
