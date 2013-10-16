@@ -11,5 +11,5 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     <a href="{{ URL::route('forgot-password') }}">Forgot Password ? </a>
 	</form>
- {{ HTML::image('/assets/img/bg-login.png') }}
+<img src="{{ asset('assets/img/bg-login.png') }}" alt="">
 @stop
