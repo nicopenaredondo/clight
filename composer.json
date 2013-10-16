@@ -9,7 +9,9 @@
 		"way/generators": "dev-master",
 		"loic-sharma/profiler": "dev-master",
 		"fzaninotto/faker": "dev-master",
-		"graham-campbell/binput": "dev-master"
+		"graham-campbell/binput": "dev-master",
+		"nesbot/carbon": "dev-master",
+		"phpunit/phpunit": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
