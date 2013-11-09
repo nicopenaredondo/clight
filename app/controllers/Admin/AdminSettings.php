@@ -1,13 +1,14 @@
 <?php
 namespace Admin;
-class AdminBranch extends \BaseController 
+class AdminSettings extends \BaseController 
 {
 	private $view_location;
 
 	public function __construct()
 	{
-		$this->view_location = 'back_end.admin.branch_management';
+		$this->view_location = 'back_end.admin.settings';
 	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -15,9 +16,10 @@ class AdminBranch extends \BaseController
 	 */
 	public function index()
 	{
-        return \View::make($this->view_location . '/show');
+        return \View::make($this->view_location . '/index');
 	}
 
+	
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -25,7 +27,7 @@ class AdminBranch extends \BaseController
 	 */
 	public function create()
 	{
-        return View::make('adminbranches.create');
+        return View::make('adminsettings.create');
 	}
 
 	/**
@@ -46,7 +48,7 @@ class AdminBranch extends \BaseController
 	 */
 	public function show($id)
 	{
-        return View::make('adminbranches.show');
+        return View::make('adminsettings.show');
 	}
 
 	/**
@@ -57,7 +59,7 @@ class AdminBranch extends \BaseController
 	 */
 	public function edit($id)
 	{
-        return View::make('adminbranches.edit');
+        return View::make('adminsettings.edit');
 	}
 
 	/**

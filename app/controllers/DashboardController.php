@@ -9,7 +9,7 @@ class DashboardController extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('dashboards.index');
+		return View::make('back_end.admin.dashboard.index');
 	}
 
 	/**

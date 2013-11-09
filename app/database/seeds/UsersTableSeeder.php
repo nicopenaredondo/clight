@@ -6,8 +6,9 @@ class UsersTableSeeder extends Seeder {
 	{
 		DB::table('users')->delete();
 		Sentry::getUserProvider()->create(array(
+				'username' => 'nico.penaredondo',
+				'password' => 'niconico',
 				'email' => 'nico.penaredondo@gmail.com',
-				'password' => Hash::make('hacker'),
 				'activated' => 1,
 				'activation_code' => Hash::make(date('YmdHis')),
 				'activated_at' => date('Y-m-d H:i:s'),

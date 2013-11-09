@@ -13,23 +13,28 @@
 
 /*
 |--------------------------------------------------------------------------
-|  Routes
+| Note!!!
 |--------------------------------------------------------------------------
-| 1. Dashboard
-| 2. myExpense
-| 3. myBalance
-| 4. reports
-| 5. settings
+| the routes is in the app/routes directory. i divided the routes into different
+| file so it can be clean as the system goes larger
+|
 */
 
-//dashboard
-Route::get('/','Admin\AdminBranch@index');
+/*--------------------------------------------------------------------------
+|  Routes - app/routes/
+|--------------------------------------------------------------------------
+| 1. Dashboard - Dashboard.php
+| 2. MyExpense - MyExpense.php
+| 3. MyBalance - MyBalance.php 
+| 4. Reports   - Report.php
+| 5. Settings  - Setting.php
+| 6. Auth      - Auth.php
+*/
 
-Route::group(array('prefix' => 'account'),function()
+foreach (glob(dirname(__FILE__)."/routes/*.php") as $filename)
 {
-	Route::get('login',array('as' => 'login','uses' => 'AccountController@getLogin'));
-	Route::get('forgot-password',array('as' => 'forgot-password','uses' => 'AccountController@getForgotPassword'));
-});
+    include_once $filename;
+}
 
 
 

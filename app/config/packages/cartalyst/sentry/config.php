@@ -46,7 +46,7 @@ return array(
 	|
 	*/
 
-	'hasher' => 'bcrypt',
+	'hasher' => 'native',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -133,7 +133,7 @@ return array(
 		|
 		*/
 
-		'login_attribute' => 'email',
+		'login_attribute' => 'username',
 
 	),
 
@@ -200,7 +200,7 @@ return array(
 		|
 		*/
 
-		'suspension_time' => 60,
+		'suspension_time' => 15,
 
 	),
 

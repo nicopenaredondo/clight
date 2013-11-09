@@ -6,7 +6,7 @@ class UsersGroupsTableSeeder extends Seeder {
 	{
 		DB::table('users_groups')->delete();
 
-		$superAdminUser = Sentry::getUserProvider()->findByLogin('nico.penaredondo@gmail.com');
+		$superAdminUser = Sentry::getUserProvider()->findByLogin('nico.penaredondo');
 		$superAdminGroup = Sentry::getGroupProvider()->findByName('SuperAdmin');
 		$superAdminUser->addGroup($superAdminGroup);
 	}

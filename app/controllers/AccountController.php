@@ -30,14 +30,14 @@ class AccountController extends BaseController {
 	{
 		//gather sanitize input 
 		$input = array(
-			'email' => Binput::get('email'),
+			'username' => Binput::get('username'),
 			'password' => Binput::get('password'),
 			'rememberMe' => Binput::get('rememberMe')
 			);
 
 		//set validation rules
 		$rules = array(
-			'email' => 'required|min:4|max:64|email',
+			'username' => 'required|min:4|max:32',
 			'password' => 'required|min:6'
 			);
 
@@ -49,17 +49,17 @@ class AccountController extends BaseController {
 			try
 			{
 				//check if the user is lock or suspended
-				$user = Sentry::getUserProvider()->findByLogin($input['email']);
+				$user = Sentry::getUserProvider()->findByLogin($input['username']);
 				$throttle = Sentry::getThrottleProvider()->findByUserId($user->id);
 				$throttle->check();
 
 				//set the login credentials
 				$credentials = array(
-					'email' => $input['email'],
+					'username' => $input['username'],
 					'password' => $input['password']
 					);
 
-				Sentry::authenticate($credentials,$input['rememberMe']);
+				Sentry::authenticate($credentials, false);
 			
 			}
 			/**
@@ -76,7 +76,7 @@ class AccountController extends BaseController {
 
 			catch(Cartalyst\Sentry\Users\UserNotActivatedException $error)
 			{
-				//you poor little prick. Admin forgot to activate your account HAHA!
+				//you poor little bitch. Admin forgot to activate your account HAHA!
 				Session::flash('error', 'Account has not been activated. Please contact the administrator immediately');
 				return Redirect::to('account/login')->withErrors($validator)->withInput();
 			}
@@ -100,7 +100,7 @@ class AccountController extends BaseController {
 
 			//you're a lucky b*tch. You passed all the exception
 			//i'll bring you to the sacred world of Citylight!. Enjoy :")
-			return Redirect::to('dashboard');
+			return Redirect::intended('dashboard');
 		}
 		else //if form validation fails!
 		{

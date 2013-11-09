@@ -1,6 +1,13 @@
 <?php
+namespace Admin;
+class AdminJobOrder extends \BaseController 
+{
+	private $view_location;
 
-class AdminJobOrder extends BaseController {
+	public function __construct()
+	{
+		$this->view_location = 'back_end.admin.job_order';
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +16,7 @@ class AdminJobOrder extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('adminjoborders.index');
+        return \View::make($this->view_location . '/index');
 	}
 
 	/**
