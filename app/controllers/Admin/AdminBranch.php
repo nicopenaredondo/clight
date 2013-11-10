@@ -15,7 +15,7 @@ class AdminBranch extends \BaseController
 	 */
 	public function index()
 	{
-        return \View::make($this->view_location . '/show');
+        return \View::make($this->view_location . '/index');
 	}
 
 	/**
@@ -25,7 +25,7 @@ class AdminBranch extends \BaseController
 	 */
 	public function create()
 	{
-        return View::make('adminbranches.create');
+        return \View::make($this->view_location . '/create');
 	}
 
 	/**

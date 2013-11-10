@@ -15,7 +15,7 @@ Citylight Information System v2.0 | Job Order
 		<div class="col-md-12">
 			<table class="table table-hovered table-condensed" style="margin-top:10px;">
 				<thead>
-					<th>Branch Name</th>
+					<th>Customer Name</th>
 					<th>Managed By</th>
 					<th>Job Order Issued</th>
 					<th>Date Created</th>
