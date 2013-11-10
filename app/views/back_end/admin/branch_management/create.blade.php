@@ -52,14 +52,14 @@ Citylight Information System v2.0 | Branch Management
 				<h4>Branch Information</h4>
 				<hr>
 				<div class="form-group">
-				    <label for="inputBranchName" class="col-sm-3 control-label">Branch Name</label>
+				    <label for="inputBranchName" class="col-sm-3 control-label"><small class="text-danger">*</small>Branch Name</label>
 				    <div class="col-sm-9">
 				      <input type="email" class="form-control" id="inputBranchName" placeholder="Branch Name">
 				    </div>
 				  </div>
 					
 				  <div class="form-group">
-				    <label for="inpuBranchAddress" class="col-sm-3 control-label">Branch Address</label>
+				    <label for="inpuBranchAddress" class="col-sm-3 control-label"><small class="text-danger">*</small>Branch Address</label>
 				    <div class="col-sm-9">
 				      <input type="email" class="form-control" id="inpuBranchAddress" placeholder="Branch Address">
 				    </div>
@@ -73,7 +73,7 @@ Citylight Information System v2.0 | Branch Management
 				  </div>
 
 				  <div class="form-group">
-				    <label for="inputMobile" class="col-sm-3 control-label">Mobile</label>
+				    <label for="inputMobile" class="col-sm-3 control-label">Mobile No.</label>
 				    <div class="col-sm-9">
 				      <input type="text" class="form-control" id="inputMobile" placeholder="Mobile Number">
 				    </div>
