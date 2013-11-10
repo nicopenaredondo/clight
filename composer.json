@@ -9,7 +9,8 @@
 		"way/generators": "dev-master",
 		"loic-sharma/profiler": "dev-master",
 		"fzaninotto/faker": "dev-master",
-		"graham-campbell/binput": "dev-master"
+		"graham-campbell/binput": "dev-master",
+		"laravelbook/ardent": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
